@@ -8,8 +8,15 @@
 
 #import "Appliance.h"
 
-@interface OwnedAppliance : Appliance
+@interface OwnedAppliance : Appliance {
+    NSMutableSet *ownerNames;
+}
 
-@property NSString *owner;
+//the designed initializer
+
+-(id)initWithProductName:(NSString *)pn
+          firstOwnerName: (NSString*)n;
+-(void)addOwnerNamesObject:(NSString *)n;
+-(void)removeOwnerNamesObject:(NSString *)n;
 
 @end

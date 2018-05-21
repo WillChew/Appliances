@@ -16,6 +16,7 @@
 @property (copy) NSString *productName;
 @property int voltage;
 
+//The designated initializer
 -(id)initWithProductName:(NSString *)pn;
 
 

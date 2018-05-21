@@ -28,5 +28,15 @@
         [self setVoltage:120];
     }
     return self;
+    
+    
+}
+
+-(id)init {
+    return [self initWithProductName:@"Unknown"];
+}
+
+- (NSString *) description {
+    return [NSString stringWithFormat:@"<%@: %d volts>", productName, voltage];
 }
 @end
