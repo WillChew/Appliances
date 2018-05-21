@@ -14,9 +14,11 @@ int main(int argc, const char * argv[]) {
         
         Appliance *a = [[Appliance alloc]init];
         NSLog(@"a is %@", a);
-        [a setProductName:@"Washing Machine"];
-        [a setVoltage:240];
+        [a setValue:@"Washing Machine" forKey:@"productName"];
+        [a setValue:[NSNumber numberWithInt:240] forKey:@"voltage"];
         NSLog(@"a is %@", a);
+        
+        NSLog(@"The product name is %@", [a valueForKey:@"productName"]);
     }
     return 0;
 }

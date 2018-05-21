@@ -10,7 +10,7 @@
 
 @implementation Appliance
 
-@synthesize productName, voltage;
+@synthesize voltage;
 
 -(id)initWithProductName:(NSString *)pn
 {
@@ -21,8 +21,7 @@
     // DID it return something non-nil?
     if (self) {
         
-        //Set product name
-        [self setProductName:pn];
+        productName = [pn copy];
         
         //Give voltage a starting value
         [self setVoltage:120];
@@ -38,5 +37,11 @@
 
 - (NSString *) description {
     return [NSString stringWithFormat:@"<%@: %d volts>", productName, voltage];
+}
+
+-(void) setVoltage:(int)x
+{
+    NSLog(@"Setting voltage to %d", x);
+    voltage = x;
 }
 @end
